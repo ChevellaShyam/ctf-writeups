@@ -44,5 +44,5 @@ python vol.py -f memory.dmp windows.userassist
 
 ### Q7 Knowing the name of the malware family is essential for correlating the attack with known threats and developing appropriate defenses. What is the name of the malware family?
 <img width="1919" height="871" alt="Screenshot 2025-11-06 114751" src="https://github.com/user-attachments/assets/2846f7ce-7c66-4ead-89ef-431c4e2fa762" />
-The file is identified as STRELASTEALER, a known malware family.
+- The file is identified as STRELASTEALER, a known malware family.
 ### Answer: STRELASTEALER
