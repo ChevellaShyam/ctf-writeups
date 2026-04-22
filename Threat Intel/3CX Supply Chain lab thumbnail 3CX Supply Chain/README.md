@@ -20,7 +20,8 @@ VirusTotal provides the history of the MSI file under the details tab, including
 
 ### Q3 Executable files (.exe) are frequently used as primary or secondary malware payloads, while dynamic link libraries (.dll) often load malicious code or enhance malware functionality. Analyzing files deposited by the Microsoft Software Installer (.msi) is crucial for identifying malicious files and investigating their full potential. Which malicious DLLs were dropped by the .msi file?
 - Under the relations tab on VirusTotal, we can see two .dll files bundled by the malicious file.
-<img width="1920" height="1080" alt="Screenshot (199)" src="https://github.com/user-attachments/assets/710c4106-5b52-418c-a122-4c3cc7c5e61d" />
+  <img width="640" height="210" alt="1_yR7dOd4J6m-SQlJe9b8d3Q" src="https://github.com/user-attachments/assets/72f97cd9-0a03-4bb4-bea5-ac06a5a225e3" />
+
 ### Answer: ffmpeg.dll,d3dcompiler_47.dll
 
 ### Q4 Recognizing the persistence techniques used in this incident is essential for current mitigation strategies and future defense improvements. What is the MITRE Technique ID employed by the .msi files to load the malicious DLL?
