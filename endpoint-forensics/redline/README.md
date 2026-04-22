@@ -8,7 +8,7 @@ To detect potentially malicious processes, the `malfind` plugin in Volatility wa
 vol.py -f “/path/to/file” windows.malfind
 <img width="1918" height="883" alt="Screenshot 2025-11-07 163512" src="https://github.com/user-attachments/assets/da1f5599-de14-454c-9470-9b8b08903fcc" />
 after it using it’s scanning part you can find the process oneetx.exe in here with process ID 5896
-# Answer: oneetx.exe
+### Answer: oneetx.exe
 
 # Q2 What is the child process name of the suspicious process?
 Now after we knew the suspicious process and it’s PID now we need to check what child process it has spawned. we can do this through searching processes list with process ID 5896 to spot any processes associated with it.
@@ -16,7 +16,7 @@ Now after we knew the suspicious process and it’s PID now we need to check wha
 ### Command Used
 python vol.py -f "/path/to/file" windows.pslist | grep 5896
 <img width="1919" height="921" alt="Screenshot 2025-11-07 163938" src="https://github.com/user-attachments/assets/f41bd65c-43f5-4457-9522-a7ec6b83f2a7" />
-# Answer: rundll32.exe
+### Answer: rundll32.exe
 
 # Q3 What is the memory protection applied to the suspicious process memory region?
 
@@ -25,7 +25,7 @@ vol.py -f memory.dmp windows.malfind
 
 - Found memory protection: **PAGE_EXECUTE_READWRITE**
 - This is suspicious because it allows both writing and executing code in memory.
-# Answer:PAGE_EXECUTE_READWRITE
+### Answer:PAGE_EXECUTE_READWRITE
 
 # Q4 What is the name of the process responsible for the VPN connection?
 
@@ -47,7 +47,7 @@ we can find 2 intersting connections as follows:
 we find here that it’s PID is 4628 we can find it using our pslist | grep 4628 to check who is the parent
 we find the parent process ID for tun2sock.exe is 6724 which we will look for it in the process lists
 and yes we can find it and it is Outline.exe
-# Answer: Outline.exe
+### Answer: Outline.exe
 
 # Q5 What is the attacker's IP address?
 
@@ -59,7 +59,7 @@ i used grep command to search and filter
 ### Command:
 strings MemoryDump.mem | grep 77.91.124.20
 <img width="1919" height="923" alt="Screenshot 2025-11-07 170426" src="https://github.com/user-attachments/assets/48a80f01-9a38-4eaf-b3ce-998340ede70b" />
-# Answer : http://77.91.124.20/store/games/index.php
+### Answer : http://77.91.124.20/store/games/index.php
 
 # Q7 What is the full path of the malicious executable?
 we know the malicious process name and it’s ID we can grap this info using pstree:
