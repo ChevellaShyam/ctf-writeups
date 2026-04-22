@@ -30,7 +30,8 @@ VirusTotal provides the history of the MSI file under the details tab, including
 
 ### Q5 Recognizing the malware type (threat category) is essential to your investigation, as it can offer valuable insight into the possible malicious actions you'll be examining. What is the threat category of the two malicious DLLs?
 - Going back to the detect ion tab we can see they are trojans.
-- 
+- <img width="1920" height="1080" alt="Screenshot (199)" src="https://github.com/user-attachments/assets/710c4106-5b52-418c-a122-4c3cc7c5e61d" />
+
 ### Answer: Trojan
 
 ### Q6 As a threat intelligence analyst conducting dynamic analysis, it's vital to understand how malware can evade detection in virtualized environments or analysis systems. This knowledge will help you effectively mitigate or address these evasive tactics. What is the MITRE ID for the virtualization/sandbox evasion techniques used by the two malicious DLLs?
